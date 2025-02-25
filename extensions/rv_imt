@@ -1,0 +1,33 @@
+# Custom ISA for IMT accelerators in ISOLDE
+
+# define 2d register
+v2ddef8   md rs1 rs2 31..25=0 14..12=0 6..0=0x2B
+v2ddefu8  md rs1 rs2 31..25=1 14..12=0 6..0=0x2B
+v2ddef16  md rs1 rs2 31..25=2 14..12=0 6..0=0x2B
+v2ddefu16 md rs1 rs2 31..25=3 14..12=0 6..0=0x2B
+v2ddef32  md rs1 rs2 31..25=4 14..12=0 6..0=0x2B
+v2ddefu32 md rs1 rs2 31..25=5 14..12=0 6..0=0x2B
+
+# place register in poly mem, also define shape
+v2dloc.rect  md rs1 rs2 31..25=0 14..12=1 6..0=0x2B
+v2dloc.row   md rs1 rs2 31..25=1 14..12=1 6..0=0x2B
+v2dloc.col   md rs1 rs2 31..25=2 14..12=1 6..0=0x2B
+v2dloc.trect md rs1 rs2 31..25=5 14..12=1 6..0=0x2B
+
+# set base address 2d register
+v2dld     md rs1       imm12 14..12=2 6..0=0x2B
+v2dst     md rs1       imm12 14..12=3 6..0=0x2B
+
+# vv opearations
+v2dadd.vv  md ms1 ms2 31..25=1  14..12=4 6..0=0x2B
+v2dsub.vv  md ms1 ms2 31..25=2  14..12=4 6..0=0x2B
+v2dcnv.vv  md ms1 ms2 31..25=4  14..12=4 6..0=0x2B
+v2ddiv.vv  md ms1 ms2 31..25=8  14..12=4 6..0=0x2B
+v2dmul.vv  md ms1 ms2 31..25=16 14..12=4 6..0=0x2B
+v2dsmul.vv md ms1 ms2 31..25=48 14..12=4 6..0=0x2B
+
+# vs operations
+v2dadd.vs  md ms1 rs2 31..25=1  14..12=5 6..0=0x2B
+v2dsub.vs  md ms1 rs2 31..25=2  14..12=5 6..0=0x2B
+v2ddiv.vs  md ms1 rs2 31..25=8  14..12=5 6..0=0x2B
+v2dmul.vs  md ms1 rs2 31..25=16 14..12=5 6..0=0x2B
