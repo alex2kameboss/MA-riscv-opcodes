@@ -30,4 +30,7 @@ v2dsmul.vv md ms1 ms2 31..25=48 14..12=4 6..0=0x2B
 v2dadd.vs  md ms1 rs2 31..25=1  14..12=5 6..0=0x2B
 v2dsub.vs  md ms1 rs2 31..25=2  14..12=5 6..0=0x2B
 v2ddiv.vs  md ms1 rs2 31..25=8  14..12=5 6..0=0x2B
+v2dsll.vs  md ms1 rs2 31..25=9  14..12=5 6..0=0x2B
+v2dsrl.vs  md ms1 rs2 31..25=10 14..12=5 6..0=0x2B
+v2dsra.vs  md ms1 rs2 31..25=11 14..12=5 6..0=0x2B
 v2dmul.vs  md ms1 rs2 31..25=16 14..12=5 6..0=0x2B
