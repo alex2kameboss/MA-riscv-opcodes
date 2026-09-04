@@ -26,6 +26,10 @@ v2dnw.vv   md ms1 ms2 31..25=7  14..12=4 6..0=0x2B
 v2ddiv.vv  md ms1 ms2 31..25=8  14..12=4 6..0=0x2B
 v2dmul.vv  md ms1 ms2 31..25=16 14..12=4 6..0=0x2B
 v2dsmul.vv md ms1 ms2 31..25=48 14..12=4 6..0=0x2B
+v2dbc_l.vv md ms1 ms2 31..25=64 14..12=4 6..0=0x2B
+v2dbc_r.vv md ms1 ms2 31..25=65 14..12=4 6..0=0x2B
+v2dcm.vv   md ms1 ms2 31..25=49 14..12=4 6..0=0x2B
+v2dcmc.vv  md ms1 ms2 31..25=50 14..12=4 6..0=0x2B
 
 # vs operations
 v2dadd.vs  md ms1 rs2 31..25=1  14..12=5 6..0=0x2B
@@ -38,3 +42,7 @@ v2dsra.vs  md ms1 rs2 31..25=11 14..12=5 6..0=0x2B
 v2dfft     md ms1 rs2 31..25=12 14..12=5 6..0=0x2B
 v2difft    md ms1 rs2 31..25=13 14..12=5 6..0=0x2B
 v2dmul.vs  md ms1 rs2 31..25=16 14..12=5 6..0=0x2B
+v2dntt_r.vs md ms1 rs2 31..25=14 14..12=5 6..0=0x2B
+v2dntt_c.vs md ms1 rs2 31..25=15 14..12=5 6..0=0x2B
+v2dintt_r.vs md ms1 rs2 31..25=17 14..12=5 6..0=0x2B
+v2dintt_c.vs md ms1 rs2 31..25=18 14..12=5 6..0=0x2B
